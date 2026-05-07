@@ -14,4 +14,8 @@ def u_turn():
     turn_left()
     turn_left()
 
-
+def front_is_wall():
+    if wall_in_front() and right_is_clear():
+        turn_right()
+    elif wall_in_front() and not right_is_clear():
+        turn_left()
