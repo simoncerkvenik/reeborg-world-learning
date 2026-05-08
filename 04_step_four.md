@@ -289,7 +289,7 @@ Then I added a finish helper in `library.py`.
 I named it:
 
 ```python
-def finnish():
+def finish():
     if at_goal() and carries_object():
         u_turn()
         move()
@@ -309,11 +309,11 @@ if the robot reaches the goal while still carrying a flower:
     return to the goal
 ```
 
-At first I called `finnish()` at the very end.
+At first I called `finish()` at the very end.
 
 That did not work well, because the robot turned left before finishing.
 
-Then I moved `finnish()` one step earlier, before the wall helper.
+Then I moved `finish()` one step earlier, before the wall helper.
 
 After that, everything worked.
 
@@ -334,7 +334,7 @@ def main():
         elif object_here():
             take()
 
-        finnish()
+        finish()
         front_is_wall()
         
 main()
