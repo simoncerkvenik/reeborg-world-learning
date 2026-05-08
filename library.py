@@ -19,3 +19,11 @@ def front_is_wall():
         turn_right()
     elif wall_in_front() and not right_is_clear():
         turn_left()
+
+def finish():
+    if at_goal() and carries_object():
+        u_turn()
+        move()
+        put()
+        u_turn()
+        move()
