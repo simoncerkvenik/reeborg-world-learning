@@ -27,3 +27,32 @@ def finish():
         put()
         u_turn()
         move()
+
+def pick_two_berries_from_left():
+    move()
+    turn_left()
+    move()
+    take()
+    move()
+    take()
+    u_turn()
+    move()
+    move()
+    while carries_object():
+        put()
+    turn_left()  
+    
+def pick_two_berries_from_right(): 
+    move()
+    turn_right()
+    move()
+    take()
+    move()
+    take()
+    u_turn()
+    move()
+    move()
+    turn_right()
+    while carries_object():
+        put()
+            
